@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: client_service
+  labels:
+    app: client_service
+  name: client_service
+spec:
+  ports:
+  
+    - protocol: TCP
+      port: 4000
+      targetPort: 4000
+   
+   
+  selector:
+    app: client_service
+  type: ClusterIP
